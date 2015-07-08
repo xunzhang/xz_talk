@@ -8,3 +8,5 @@ Talk
 [Exploration of Realtime Recsys](http://xunzhangthu.org/talk/realtime_recsys_plato/index.html) 计算平台讨论会 @Douban. June, 2014.
 
 [Paracel: An Distributed Optimization Framework with Parameter Server](http://xunzhangthu.org/talk/learning_with_paracel/content.html) HOF技术分享 @Douban, Oct, 2014.
+
+[Distributed ML at Douban: stories, lessons and advice](http://xunzhangthu.org/talk/distributed_ml_douban.pdf) Group Meeting @Douban, Jul, 2015.
