@@ -44,7 +44,7 @@ LANGUAGE sql IMMUTABLE;
 
 -- unfold 2d array
 CREATE TABLE netflix_sample_model_structured AS (
-SELECT generate_series(1, 2244) as mid, unnest_2d_1d(matrix_u[1:2244][1:80]) as fac
+SELECT generate_series(1, 2244) AS mid, unnest_2d_1d(matrix_u[1:2244][1:80]) AS fac
 FROM netflix_sample_model WHERE id = 1
 );
 
@@ -52,7 +52,7 @@ FROM netflix_sample_model WHERE id = 1
 CREATE TABLE netflix_sample_movie_similarity AS (
 SELECT t1.mid AS mid1 ,
        t2.mid As mid2,
-      madlib.cosine_similarity(t1.fac, t2.fac) as sim
+      madlib.cosine_similarity(t1.fac, t2.fac) AS sim
 FROM netflix_sample_model_structured AS t1,
      netflix_sample_model_structured AS t2
 WHERE t1.mid < t2.mid
@@ -67,7 +67,7 @@ SELECT 2244 * (2244-1) / 2;
 
 -- II. recommendation: dot product recommendation
 CREATE TABLE netflix_sample_model_structured_u1 AS (
-SELECT generate_series(1, 1) as uid, unnest_2d_1d(matrix_u[1:1][1:80]) as fac
+SELECT generate_series(1, 1) AS uid, unnest_2d_1d(matrix_u[1:1][1:80]) AS fac
 FROM netflix_sample_model WHERE id = 1
 );
 
@@ -80,7 +80,13 @@ ORDER BY t1.uid, dp DESC, t2.mid
 LIMIT 100;
 
 -- III. recommendation: rating predict using similarity
--- TODO
+-- for example uid = 1 and mid = 2
+
+SELECT pair_table.mid1, pair_table.mid2, sim_table.sim
+FROM (SELECT 2 AS mid1, mid AS mid2 FROM netflix_sample WHERE uid = 1) AS pair_table,
+     netflix_sample_movie_similarity AS sim_table
+WHERE pair_table.mid1 = sim_table.mid1 and pair_table.mid2 = sim_table.mid2 OR
+      pair_table.mid1 = sim_table.mid2 and pair_table.mid2 = sim_table.mid1;
 
 -- clean up
 DROP TABLE netflix_sample;
@@ -88,3 +94,4 @@ DROP TABLE netflix_sample_model;
 DROP TABLE netflix_sample_model_structured;
 DROP TABLE netflix_sample_movie_similarity;
 DROP TABLE netflix_sample_model_structured_u1;
+DROP TABLE tmp;
