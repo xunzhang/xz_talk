@@ -1,4 +1,5 @@
 ## TRY OUT
+0. Make sure you have successfully intalled HAWQ and MADlib.
 1. Download demo data: `wget http://xunzhangthu.org/data/train -O train`.
 2. Format train data `sample_fmt` : `python prepare.py`.
 3. Follow `demo.sql` step by step for instruction.
