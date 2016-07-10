@@ -1,5 +1,6 @@
 Talk
 ====
+[Impala Intro](http://xunzhangthu.org/talk/impala_intro.pdf)
 
 [Develop RecSys with HAWQ](http://xunzhangthu.org/talk/Develop_RecSys_with_HAWQ.pdf) Meetup @Shanghai, Apr, 2016.
 
