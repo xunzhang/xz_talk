@@ -1,5 +1,7 @@
 Talk
 ====
+[Poseidon Intro](http://xunzhangthu.org/talk/poseidon_intro.pdf) Teck Talk @Petuum. Jan, 2017.
+
 [Impala Intro](http://xunzhangthu.org/talk/impala_intro.pdf) Group Meeting @Pivotal. Jul, 2015.
 
 [Develop RecSys with HAWQ](http://xunzhangthu.org/talk/Develop_RecSys_with_HAWQ.pdf) Meetup @Shanghai. Apr, 2016.
