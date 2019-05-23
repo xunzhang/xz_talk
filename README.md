@@ -1,5 +1,7 @@
 Talk
 ====
+[Brief Overview of Knobs Tuning in the Self-Tuning Database](http://xunzhangthu.org/talk/BriefOverviewofKnobsTuning.pdf): Sharing @Alibaba. May, 2019.
+
 [Paper Reading: Neural Ordinary Differential Equations](http://xunzhangthu.org/talk/node.pdf): Group Meeting @Alibaba. Dec, 2018.
 
 [Petuum Poseidon: 高效的分布式深度学习平台](https://www.leiphone.com/special/custom/T11.html) [T11 2017 Summit](https://www.leiphone.com/special/custom/T11.html) @Beijing. Sep 2017.
